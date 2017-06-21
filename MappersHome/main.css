@@ -1,11 +1,4 @@
-.res_bg {
-	width: 642px;
-	max-width: 642px;
-	overflow: auto;
-	width: 642px;
-	margin: auto;
-}
-.pack_bg {
+.bg {
 	width: 642px;
 	max-width: 642px;
 	overflow: auto;
