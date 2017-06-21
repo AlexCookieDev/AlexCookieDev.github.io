@@ -29,6 +29,16 @@ a {
 	text-decoration: none;
 }
 
+h1 {
+	font-family: "Source Sans Pro Regular";
+	color: #444444;
+	font-size: 48px;
+	margin: auto;
+	margin-top:16px;
+	margin-bottom: 16px;
+	text-decoration: none;
+	text-align: center;
+}
 h2 {
 	font-family: "Source Sans Pro Regular";
 	color: #444444;
