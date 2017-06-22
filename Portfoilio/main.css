@@ -72,7 +72,7 @@ h3 {
 	text-shadow: none;
 	padding: 6px;
 	border-radius: 6px;
-	transition:color .1s ease-in, text-shadow .1s ease-in;
+	transition:color .1s ease-in, text-shadow .1s ease-in, background-color .08s ease-in;
 }
 
 .map_img:hover + h3 {
