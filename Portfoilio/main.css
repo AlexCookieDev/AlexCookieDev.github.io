@@ -1,0 +1,68 @@
+.box {
+	width: 642px;
+	max-width: 642px;
+	overflow: auto;
+	margin: auto;
+}
+.map {
+	float: left;
+	margin: auto;
+	margin-bottom: 10px;
+	height: 360px;
+	width: 638px;
+	border-radius: 6px;
+	border: 1px solid #757575;
+	overflow: hidden;
+}
+.map_img {
+	height: 125%;
+	margin-top:-8%;
+	object-fit: cover;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: "Source Sans Pro Regular";
+	color: #444444;
+	font-size: 48px;
+	margin: auto;
+	margin-top:16px;
+	margin-bottom: 16px;
+	text-decoration: none;
+	text-align: center;
+}
+h2 {
+	font-family: "Source Sans Pro Regular";
+	color: #444444;
+	font-size: 32px;
+	margin: auto;
+	margin-top:16px;
+	margin-bottom: 16px;
+	text-decoration: none;
+	text-align: center;
+}
+h3 {
+	font-family: "Source Sans Pro Regular";
+	position:absolute;
+	color: #444444;
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+}
+h4 {
+	font-family: "Source Sans Pro Regular";
+	color: #999999;
+	font-size: 12px;
+	margin: auto;
+	margin-bottom:12px;
+	width: 90%;
+	text-align: center;
+	position: relative;
+	bottom:10px;
+	top:6px;
+}
+/*Test*/
