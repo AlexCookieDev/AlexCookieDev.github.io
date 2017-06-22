@@ -24,9 +24,9 @@ html,body {
 }
 .map_img {
 	width:100%;
+	margin: auto;
 	object-fit: contain;
-
-	transition:color .5s ease-in, text-shadow .5s ease-in;
+	transition:color .5s ease-in, text-shadow .5s ease-in,width 0.1s ease-in;
 }
 
 a {
@@ -47,13 +47,14 @@ h1 {
 }
 h2 {
 	font-family: "TF2 Secondary";
-	color: #fff;
+	color: #eee;
 	font-size: 24px;
 	margin: auto;
 	margin-top:16px;
 	margin-bottom: 16px;
 	text-decoration: none;
 	text-align: center;
+	letter-spacing: 0.02em;
 }
 h3 {
 	font-family: "TF2 Secondary";
@@ -77,6 +78,11 @@ h3:hover {
 	text-shadow: 0 1px 2px #080808;
 	color: rgba(250,250,250,255);
 }
+
+.map_img:hover {
+	width: 725px;
+}
+
 
 h4 {
 	font-family: "Source Sans Pro Regular";
