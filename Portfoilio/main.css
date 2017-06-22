@@ -7,14 +7,14 @@ html,body {
 	max-width: 720px;
 	overflow: auto;
 	margin: auto;
-	background-color: #33302e;
+	background-color: #27231f;
 	padding-left:20px;
 	padding-right: 20px;
 }
 .map {
 	float: left;
 	margin: auto;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	height: 400px;
 	width: 720px;
 	border-radius: 6px;
@@ -36,14 +36,17 @@ a {
 h1 {
 	font-family: "TF2 Build";
 	color: #fff;
-	font-size: 48px;
-	width: 720px;
+	font-size: 47px;
+	width: 640px;
 	margin: auto;
+	margin-top: 10px;
 	padding:20px;
 	text-decoration: none;
 	text-align: center;
-	background-color: #33302e;
-	text-shadow: 0 1px 2px #111111;
+	background-color: #776b5f;
+	border-radius: 10px;
+	/*text-shadow: 0 2px 8px #2b2b2b;*/
+	border: 4px solid #36332d;
 }
 h2 {
 	font-family: "TF2 Secondary";
@@ -67,22 +70,28 @@ h3 {
 	font-size: 26px;
 	text-align: right;
 	text-shadow: none;
+	padding: 6px;
+	border-radius: 6px;
 	transition:color .1s ease-in, text-shadow .1s ease-in;
 }
 
 .map_img:hover + h3 {
-	text-shadow: 0 1px 2px #080808;
+	text-shadow: 0 1px 5px #2b2b2b;
 	color: rgba(250,250,250,255);
+	background-color: #776b5f;
 }
 h3:hover {
-	text-shadow: 0 1px 2px #080808;
+	text-shadow: 0 1px 5px #2b2b2b;
 	color: rgba(250,250,250,255);
+	background-color: #776b5f;
 }
 
 .map_img:hover {
 	width: 725px;
 }
-
+h3:hover + .map_img {
+	width: 725px;
+}
 
 h4 {
 	font-family: "Source Sans Pro Regular";
@@ -93,6 +102,6 @@ h4 {
 	text-align: center;
 	margin: auto;
 	position: relative;
-	background-color: #33302e;
+	background-color: #27231f;
 }
 /*Test*/
