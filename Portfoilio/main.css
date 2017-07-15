@@ -1,6 +1,8 @@
 html,body {
 	margin: 0;
 	background-color: #4e443b;
+	text-decoration: none;
+	text-decoration-style:none;
 }
 .box {
 	width: 720px;
@@ -11,6 +13,7 @@ html,body {
 	padding-left:20px;
 	padding-right: 20px;
 }
+
 .map {
 	float: left;
 	margin: auto;
@@ -18,7 +21,7 @@ html,body {
 	height: 400px;
 	width: 720px;
 	border-radius: 6px;
-	border: 1px solid #808080;
+	border: 1px solid #a7a7a7;
 	overflow: hidden;
 	position: relative;
 }
@@ -30,13 +33,72 @@ html,body {
 }
 
 .navbar {
-	width: 720px;
+	display: inline-block;
 	max-width: 720px;
+	height: 36px;
 	overflow: auto;
-	margin: auto;
-	background-color: #27231f;
+	margin: 0 auto;
 	padding-left:20px;
 	padding-right: 20px;
+
+}
+.act {
+	background-color: #3c3732 !important;
+    pointer-events: none;
+    cursor: default;
+}
+
+.navbutton a{
+	color:#fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #352e27;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+.navbutton {
+	font-family: "TF2 Secondary";
+	margin-top: 1px;
+	margin-left: 4px;
+	margin-right: 4px;
+	height: 18px;
+	padding: 6px;
+	float: left;
+	overflow:visible;
+	background-color: #5a544d;
+	border-radius: 4px;
+	border: 1px solid #36332d;
+}
+
+.contact {
+	height: 64px;
+	width: 340px;
+	margin: 10px;
+	border-radius: 32px;
+	background-color: #111;
+	margin-left: 170px;
+
+}
+.contactimg {
+	height:64px;
+	border-radius: 50%;
+	width: 64px
+}
+.contactlink {
+	display: block;
+	position: relative;
+	text-align:left;
+	vertical-align:bottom;
+	top:-68px;
+	padding: 22px 0px;
+	margin-left: 74px;
+	height: 20px;
+	width: 266px;
+	text-decoration:none;
+	font-family: 'Zilla Slab', serif;
+	color: #fff;
+}
+.unact {
+	color:#a5a5a5;
 }
 }
 
@@ -115,4 +177,19 @@ h4 {
 	position: relative;
 	background-color: #27231f;
 }
-/*Test*/
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Zilla Slab'), local('ZillaSlab-Regular'), url(https://fonts.gstatic.com/s/zillaslab/v1/Rqj61QmcYU88jfBZybBYtSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Zilla Slab'), local('ZillaSlab-Regular'), url(https://fonts.gstatic.com/s/zillaslab/v1/pQTSOfVcqKWtc7NVLbIJ7Pk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
