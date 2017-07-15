@@ -1,6 +1,9 @@
 html,body {
 	margin: 0;
 	background-color: #4e443b;
+	background-position: 25%;
+	background-image: url("img/bg.jpg");
+	background-size: 500px;
 	text-decoration: none;
 	text-decoration-style:none;
 }
