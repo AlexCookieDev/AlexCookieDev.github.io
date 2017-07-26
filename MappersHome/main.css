@@ -18,6 +18,10 @@
 	height: 128px;
 	width: 128px;
 }
+.pack_img:hover {
+	-webkit-filter: opacity(80%);
+	filter: opacity(80%);
+}
 a {
 	text-decoration: none;
 }
