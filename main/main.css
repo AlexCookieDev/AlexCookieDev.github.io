@@ -33,6 +33,7 @@ html,body {
 	margin: auto;
 	object-fit: contain;
 	transition:color .5s ease-in, text-shadow .5s ease-in,width 0.1s ease-in;
+	position:relative;
 }
 
 .navbar {
@@ -163,9 +164,11 @@ h3:hover {
 }
 
 .map_img:hover {
+	left: -5px !important;
 	width: 970px;
 }
 h3:hover + .map_img {
+	left: -5px !important; 
 	width: 970px;
 }
 
