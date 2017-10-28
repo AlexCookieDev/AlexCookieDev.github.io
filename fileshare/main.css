@@ -14,11 +14,13 @@ body{
     margin-top: 50px;
     background-color: white;
     border-radius: 4px;
+    animation: 1s ease-out 0s 1 opacite !important;
 }
 .bg_head {
     height: 24px;
     width: 100%;
     background-color: #52ac62;
+    animation: 1s ease-out 0s 1 opacite !important;
     
 }
 .prog_head {
@@ -26,13 +28,35 @@ body{
     width: 100%;
     background-color: #5274ac;
     border-radius: 4px 4px 0 0;
+    animation: 1s ease-out 0s 1 opacite !important;
     
 }
 .game {
 	float: left;
 	height: 90px;
 	width: 90px;
+    animation: 1.5s ease-out 0s 1 opacite !important;
     transition: background-color .1s ease-in;
+}
+
+@keyframes opacite {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacite2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .game_img {
 	margin: 16px 0px 0px 21px;
@@ -97,3 +121,4 @@ h3:hover + .game {
 }
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
