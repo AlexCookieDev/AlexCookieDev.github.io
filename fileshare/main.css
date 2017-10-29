@@ -31,6 +31,14 @@ body{
     animation: 1s ease-out 0s 1 opacite !important;
     
 }
+.mod_head {
+    height: 24px;
+    width: 100%;
+    background-color: #ba3535;
+    border-radius: 4px 4px 0 0;
+    animation: 1s ease-out 0s 1 opacite !important;
+    
+}
 .game {
 	float: left;
 	height: 90px;
