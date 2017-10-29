@@ -7,6 +7,7 @@
         <link rel="icon" href="img/discord.ico" type="image/x-icon">
 	</head>
 	<body>
+        <audio id="bgm" src="img/shop.mp3" autoplay preload="auto" loop></audio>
         <div class="bg">
             <div class="bg_head"><h2>Игры</h2></div>
             <a href="https://drive.google.com/uc?export=download&id=0Bw65izrTW9czQi1QLUdXZDdFNDA"><div class="game">
@@ -110,4 +111,8 @@
             </div></a>
         </div>
 	</body>
+    <script>
+        bgm=document.getElementById("bgm");
+        bgm.volume=0.1;
+    </script>
 </html>
