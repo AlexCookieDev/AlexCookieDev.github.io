@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "devil_models/new_map/subway/subway_door_baseColor"
+	"$bumpmap" "devil_models/new_map/subway/subway_door_n"
+                     "$phong" "1"
+	
+	"$bumpmap"				"devil_models/new_map/subway/station_base_normal"
+	"$phongboost"				1
+	"$phongfresnelranges"		"[0.3 0.3 0.3]"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.05 0.05 0.05]"
+}
