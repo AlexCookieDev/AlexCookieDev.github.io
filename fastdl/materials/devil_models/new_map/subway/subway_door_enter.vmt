@@ -1,6 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "devil_models/new_map/subway/subway_door_enter"
-	"$alphatest" 1
-	"$translucent" 1
-}

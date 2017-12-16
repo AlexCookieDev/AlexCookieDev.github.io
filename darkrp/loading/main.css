@@ -1,0 +1,56 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#mainbox {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#logo {
+    display: block;
+    width: 12.5%;
+    height: 12.5%;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: dn 15s linear infinite;
+    -webkit-animation: dn 15s linear infinite;
+}
+#loading-ring {
+    display: block;
+    transform-origin: 50% 50% 0;
+    width: 4%;
+    height: 4%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    //animation: rotate 3s linear infinite;
+    //-webkit-animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }   
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    0% { transform: rotate(0deg); }   
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes dn {
+    0%      { filter:brightness(100%);  }   
+    25%     { filter:brightness(120%);  }
+    50%     { filter:brightness(100%);  }
+    75%     { filter:brightness(50%) ;  }
+    100%    { filter:brightness(100%);  }  
+}
+@-webkit-keyframes dn {
+    0%      { -webkit-filter:brightness(100%);  }   
+    25%     { -webkit-filter:brightness(120%);  }
+    50%     { -webkit-filter:brightness(100%);  }
+    75%     { -webkit-filter:brightness(50%) ;  }
+    100%    { -webkit-filter:brightness(100%);  }  
+}
