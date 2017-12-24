@@ -10,13 +10,18 @@
 }
 @media (min-width: 1080px) {
        .box {width: 40%;}
+        table {font-size: 125%;}
 }
-
+@media (max-width: 1080px) {
+       .box {width: 80%;}
+        table {font-size: 175%;}
+}
 table {float: none; display:table;margin-bottom: 5%; position:relative;font-size: 125%;border-radius: 4px;text-align: left;width: 100%;border: solid 1px 34495e}
 tr {border: 2px;border-color: #eee;width: 100%;}
 th {text-align: center;width: 100%;background-color: #34495e;border-radius: 4px;border: solid 1px #34495e;color: #fff;padding: 0;}
 td,tbody {width: 100%;border: solid 2px #fff;}
 html{height: 100%;width: 100%;padding: 0;margin: auto;}
+
 body{
     height: 100%;
     width: 100%;margin: 0;
