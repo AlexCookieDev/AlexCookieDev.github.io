@@ -13,18 +13,20 @@ body {
 }
 #logo {
     display: block;
-    height: 12.5%;
-    margin-top: 25%;
+    height: 16vh;
+    margin-top: 40vh;
     margin-left: auto;
     margin-right: auto;
     animation: dn 15s linear infinite;
+    border: 1px solid #fff;
+    border-radius: 50%;
     -webkit-animation: dn 15s linear infinite;
 }
 #loading-ring {
     display: block;
     transform-origin: 50% 50% 0;
-    height: 4%;
-    margin-top: 5%;
+    height: 4vh;
+    margin-top: 2vh;
     margin-left: auto;
     margin-right: auto;
     //animation: rotate 3s linear infinite;

@@ -1,201 +1,51 @@
 html,body {
 	margin: 0;
-	background-color: #4e443b;
-	background-position: top;
-	background-image: url("img/bg.jpg");
-	background-size: 500px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 	text-decoration: none;
-	text-decoration-style:none;
+    display: block;
 }
-.box {
-	width: 960px;
-	max-width: 960px;
-	overflow: auto;
-	margin: auto;
-	background-color: #27231f;
-	padding-left:20px;
-	padding-right: 20px;
+body {
+    margin: auto;
 }
-
-.map {
-	float: left;
-	margin: auto;
-	margin-bottom: 20px;
-	height: 540px;
-	width: 960px;
-	border-radius: 6px;
-	border: 1px solid #a7a7a7;
-	overflow: hidden;
-	position: relative;
+.header {
+    height: 24px;
+    margin: 32px auto;
+    padding: 0 3vh;
 }
-.map_img {
-	width:100%;
-	margin: auto;
-	object-fit: contain;
-	transition:color .5s ease-in, text-shadow .5s ease-in,width 0.1s ease-in;
-	position:relative;
-}
-
-.navbar {
-	display: inline-block;
-	max-width: 960px;
-	height: 36px;
-	overflow: auto;
-	margin: 0 auto;
-	padding-left:20px;
-	padding-right: 20px;
-
-}
-.act {
-	background-color: #3c3732 !important;
-    pointer-events: none;
-    cursor: default;
-}
-
-.navbutton a{
-	color:#fff;
-	text-decoration: none;
-	text-shadow: 1px 1px 0px #352e27;
-	font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-}
-.navbutton {
-	font-family: "TF2 Secondary";
-	margin-top: 1px;
-	margin-left: 4px;
-	margin-right: 4px;
-	height: 18px;
-	padding: 6px;
-	float: left;
-	overflow:visible;
-	background-color: #5a544d;
-	border-radius: 4px;
-	border: 1px solid #36332d;
-}
-
-.contact {
-	height: 64px;
-	width: 340px;
-	margin: 10px;
-	border-radius: 32px;
-	background-color: #111;
-	margin-left: 170px;
-
-}
-.contactimg {
-	height:64px;
-	border-radius: 50%;
-	width: 64px
-}
-.contactlink {
-	display: block;
-	position: relative;
-	text-align:left;
-	vertical-align:bottom;
-	top:-68px;
-	padding: 22px 0px;
-	margin-left: 74px;
-	height: 20px;
-	width: 266px;
-	text-decoration:none;
-	font-family: 'Zilla Slab', serif;
-	color: #fff;
-}
-.unact {
-	color:#a5a5a5;
-}
-}
-
-a {
-	text-decoration: none;
-}
-
 h1 {
-	font-family: "TF2 Build";
-	color: #fff;
-	font-size: 47px;
-	width: 980px;
-	margin: auto;
-	margin-top: 10px;
-	padding:20px;
-	text-decoration: none;
-	text-align: center;
-	background-color: #776b5f;
-	border-radius: 10px;
-	text-shadow: 2px 3px 0px #352e27;
-	border: 4px solid #36332d;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #222;
+    font-size: 24px;
+    margin: 0;
 }
-h2 {
-	font-family: "TF2 Secondary";
-	color: #eee;
-	font-size: 24px;
-	margin: auto;
-	margin-top:16px;
-	margin-bottom: 16px;
-	text-decoration: none;
-	text-align: center;
-	letter-spacing: 0.02em;
+.content {
+    width: 100vh;
+    padding: 0 3vh;
 }
-h3 {
-	font-family: "TF2 Secondary";
-	position:absolute;
-	max-height: 28px;
-	margin: 0;
-	right: 20px;
-	bottom: 20px;
-	color: rgba(250,250,250,0);
-	font-size: 26px;
-	text-align: right;
-	text-shadow: none;
-	padding: 6px;
-	border-radius: 6px;
-	transition:color .1s ease-in, text-shadow .1s ease-in, background-color .08s ease-in;
+.item {
+    position: relative;
+    overflow: hidden;
+    width: 48vh;
+    height: 40vh;
+    margin: 1%;
+    float: left;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+.item:hover {
+    opacity: 0.05;
+}
+.item:hover + h3 {
+    
+}
+.item-img {
+    margin-left: 50%;
+    margin-top: 25%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    width: 100vh;
 }
 
-.map_img:hover + h3 {
-	text-shadow: 2px 2px 0px #352e27;
-	color: rgba(250,250,250,255);
-	background-color: #776b5f;
-}
-h3:hover {
-	text-shadow: 2px 2px 0px #352e27;
-	color: rgba(250,250,250,255);
-	background-color: #776b5f;
-}
-
-.map_img:hover {
-	left: -5px !important;
-	width: 970px;
-}
-h3:hover + .map_img {
-	left: -5px !important; 
-	width: 970px;
-}
-
-h4 {
-	font-family: "Source Sans Pro Regular";
-	color: #cccccc;
-	font-size: 12px;
-	padding-bottom:12px;
-	width: 1000px;
-	text-align: center;
-	margin: auto;
-	position: relative;
-	background-color: #27231f;
-}
-
-@font-face {
-  font-family: 'Zilla Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Zilla Slab'), local('ZillaSlab-Regular'), url(https://fonts.gstatic.com/s/zillaslab/v1/Rqj61QmcYU88jfBZybBYtSEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Zilla Slab';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Zilla Slab'), local('ZillaSlab-Regular'), url(https://fonts.gstatic.com/s/zillaslab/v1/pQTSOfVcqKWtc7NVLbIJ7Pk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
