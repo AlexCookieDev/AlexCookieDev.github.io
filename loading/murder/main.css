@@ -6,17 +6,24 @@ body {
     background-repeat: repeat;
     background-size: 100%;
     animation: shiver 10s linear infinite;
+    -webkit-animation: shiver 10s linear infinite;
 }
 #logo {
+    width: 20%;
     display: block;
     position: absolute;
-    width: 500px;
-    height: 309px;
     bottom: 30px;
     left: 30px;
 }
-
+#logo img {
+    width: 100%;
+}
 @keyframes shiver {
+    0%   {background-size: 105%;}
+    50%  {background-size: 100%;}
+    100% {background-size: 105%;}
+}
+-webkit-@keyframes shiver {
     0%   {background-size: 105%;}
     50%  {background-size: 100%;}
     100% {background-size: 105%;}
