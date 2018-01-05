@@ -2,16 +2,22 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: url("https://orig00.deviantart.net/acb8/f/2012/040/0/6/metal_seamless_by_hhh316-d4p6v71.jpg");
-    background-size: 600px;
-    background-blend-mode: multiply;
-    -webkit-background-blend-mode: multiply;
-    background-color: #333;
+    background-image: url("bg.png");
+    background-repeat: repeat;
+    background-size: 100%;
+    animation: shiver 10s linear infinite;
 }
 #logo {
     display: block;
+    position: absolute;
     width: 500px;
     height: 309px;
-    margin:200px auto;
-    opacity: 0.6;
+    bottom: 30px;
+    left: 30px;
+}
+
+@keyframes shiver {
+    0%   {background-size: 105%;}
+    50%  {background-size: 100%;}
+    100% {background-size: 105%;}
 }
