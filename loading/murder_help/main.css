@@ -1,0 +1,20 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url("img/bg.png");
+    background-repeat: repeat;
+    background-size: 0.7vh;
+}
+
+.derma {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.main-box {
+    width: 900px;
+    height: 90vh;
+    margin: 5vh auto;
+}
+.sub-box
