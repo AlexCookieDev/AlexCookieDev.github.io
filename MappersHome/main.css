@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .bg {
 	width: 642px;
 	max-width: 642px;
@@ -27,7 +29,7 @@ a {
 }
 
 h1 {
-	font-family: "Source Sans Pro Regular";
+	font-family: 'Roboto', sans-serif;
 	color: #444444;
 	font-size: 48px;
 	margin: auto;
@@ -37,7 +39,7 @@ h1 {
 	text-align: center;
 }
 h2 {
-	font-family: "Source Sans Pro Regular";
+	font-family: 'Roboto', sans-serif;
 	color: #444444;
 	font-size: 32px;
 	margin: auto;
@@ -47,7 +49,7 @@ h2 {
 	text-align: center;
 }
 h3 {
-	font-family: "Source Sans Pro Regular";
+	font-family: 'Roboto', sans-serif;
 	color: #444444;
 	font-size: 16px;
 	margin-top:-32px;
@@ -56,7 +58,7 @@ h3 {
 	text-decoration: none;
 }
 h4 {
-	font-family: "Source Sans Pro Regular";
+	font-family: 'Roboto', sans-serif;
 	color: #999999;
 	font-size: 12px;
 	margin: auto;
