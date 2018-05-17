@@ -56,7 +56,7 @@ function CalculateFix() {
 
   console.log(fourfour+" "+fivefour+" "+fivefive)
   console.log("--------------------------------")
-  if (ine.value = "") {
+  if (ine.value != "") {
     if (avgscore<3.5 ) {
       document.getElementById("fives").innerHTML = "До четвёрки нужно получить еще "+fivefour+" "+wordfive1+" или "+fourfour+" "+wordfour1+"!";
       document.getElementById("mark").style.backgroundColor = "#3a3a3a";
@@ -76,5 +76,12 @@ function CalculateFix() {
       document.getElementById("mark2").style.backgroundColor = "#c2d23a";
       document.getElementById("mark2").style.color = "#fff";
     }
+  }else {
+    document.getElementById("fives").innerHTML = " ";
+    document.getElementById("mark").style.backgroundColor = "#3a3a3a";
+    document.getElementById("mark").style.color = "#b1b1b1";
+    document.getElementById("fives2").innerHTML = " ";
+    document.getElementById("mark2").style.backgroundColor = "#3a3a3a";
+    document.getElementById("mark2").style.color = "#b1b1b1";
   }
 }
