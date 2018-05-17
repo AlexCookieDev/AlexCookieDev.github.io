@@ -32,7 +32,7 @@ function CalculateFix() {
 
   if (fourfour==1) {
     wordfour1 = "четверка"
-  }else if (1>fourfour<5) {
+  }else if (fourfour<5&&fourfour>1) {
     wordfour1 = "четверки"
   }else {
     wordfour1 = "четверок"
@@ -40,7 +40,7 @@ function CalculateFix() {
 
   if (fivefour==1) {
     wordfive1 = "пятерка"
-  }else if (1>fivefour<5) {
+  }else if (fivefour<5&&fivefour>1) {
     wordfive1 = "пятерки"
   }else {
     wordfive1 = "пятерок"
