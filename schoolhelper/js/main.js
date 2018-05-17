@@ -48,7 +48,7 @@ function CalculateFix() {
 
   if (fivefive==1) {
     wordfive2 = "пятерка"
-  }else if (fivefive<5||fivefive>1) {
+  }else if (fivefive<5&&fivefive>1) {
     wordfive2 = "пятерки"
   }else {
     wordfive2 = "пятерок"
