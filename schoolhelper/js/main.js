@@ -30,25 +30,25 @@ function CalculateFix() {
 
   console.log(fourfour+" "+fivefour+" "+fivefive)
 
-  if (fourfour==1) {
-    wordfour1 = "четверка"
-  }else if (fourfour<5&&fourfour>1) {
+  if (fourfour.toString().slice(-1)==1) {
+    wordfour1 = "четверку"
+  }else if (fourfour.toString().slice(-1)<5&&fourfour.toString().slice(-1)>1) {
     wordfour1 = "четверки"
   }else {
     wordfour1 = "четверок"
   }
 
-  if (fivefour==1) {
-    wordfive1 = "пятерка"
-  }else if (fivefour<5&&fivefour>1) {
+  if (fivefour.toString().slice(-1)==1) {
+    wordfive1 = "пятерку"
+  }else if (fivefour.toString().slice(-1)<5&&fivefour.toString().slice(-1)>1) {
     wordfive1 = "пятерки"
   }else {
     wordfive1 = "пятерок"
   }
 
-  if (fivefive==1) {
-    wordfive2 = "пятерка"
-  }else if (fivefive<5&&fivefive>1) {
+  if (fivefive.toString().slice(-1)==1) {
+    wordfive2 = "пятерку"
+  }else if (fivefive.toString().slice(-1)<5&&fivefive.toString().slice(-1)>1) {
     wordfive2 = "пятерки"
   }else {
     wordfive2 = "пятерок"
