@@ -1,1 +1,214 @@
-@import "https://fonts.googleapis.com/css?family=Nunito";html,body{display:block;height:100%;margin:0;padding:0;text-decoration:none;width:100%}.header{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;height:3vh;margin:3vh auto;padding:0 3vw;user-select:none}.contacts{margin:10vh auto;width:34vw}.contacts a{border-radius:50%;float:left;height:10vw;margin:0 .5vw;transition:color .2s ease-out;width:10vw}.contacts a img{border-radius:50%;height:10vw;transition:color .2s ease-out;width:10vw}a:hover img{opacity:.2;transition:opacity .2s ease-out}a{display:block;overflow:hidden}h1{color:#222;display:block;float:left;font-family:'Nunito',sans-serif;font-size:3vh;font-weight:400;margin:0!important;vertical-align:middle;width:20vh}.subhead{color:#b1b1b1;display:block;float:left;font-family:'Nunito',sans-serif;font-size:1.5vh;font-weight:400;margin:0!important;padding-top:.9vh;vertical-align:middle;width:20vw}h2{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#222;display:block;font-family:'Nunito',sans-serif;font-size:10vh;font-weight:400;height:10vh;margin:0;opacity:0;position:absolute;text-align:center;top:17.5vh;user-select:none;vertical-align:middle;width:100%;z-index:50}h3{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;color:#6f6f6f;display:block;font-family:'Nunito',sans-serif;font-size:3vh;font-weight:400;height:5vh;margin:0;opacity:0;position:absolute;text-align:center;top:40vh;user-select:none;vertical-align:middle;width:100%;z-index:49}.button{color:#a2a2a2;float:right;font-family:'Nunito',sans-serif;font-size:2vh;font-weight:400;margin:0;margin-left:1vw;margin-top:.5vh;padding:0;text-decoration:none;transition:color .2s ease-out}.selected{color:#222;float:right;font-family:'Nunito',sans-serif;font-size:2vh;font-weight:400;margin:0;margin-left:1vw;margin-top:.5vh;padding:0;text-decoration:none;transition:color .2s ease-out}.button:hover{color:#222;transition:color .2s ease-out}.content{animation:load .4s ease-in 1;padding:0 2vw;width:100vw}.item{float:left;height:45vh;margin:1vw;margin-bottom:2vw!important;margin-top:0;opacity:1;overflow:hidden;position:relative;transition:opacity .2s ease-out;width:46vw}.item-img:hover{opacity:.1;transition:opacity .2s ease-out}a:hover h2{opacity:1;transition:opacity .2s ease-out}a:hover h3{opacity:1;transition:opacity .2s ease-out}a:hover .item-img{opacity:.1;transition:opacity .2s ease-out}.item-img{-webkit-transform:translateY(-50%) translateX(-50%);height:60vh;margin-left:50%;margin-top:25%;transition:opacity .2s ease-out;z-index:10}@keyframes load{0%{opacity:0}100%{opacity:1}}
+@import "https://fonts.googleapis.com/css?family=Nunito";
+html,
+body {
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%
+}
+
+.header {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    height: 3vh;
+    margin: 2.5vh auto 3vh auto;
+    padding: 0 3vw;
+    user-select: none
+}
+
+.contacts {
+    margin: 10vh auto;
+    width: 34vw
+}
+
+.contacts a {
+    border-radius: 50%;
+    float: left;
+    height: 10vw;
+    margin: 0 .5vw;
+    transition: color .2s ease-out;
+    width: 10vw
+}
+
+.contacts a img {
+    border-radius: 50%;
+    height: 10vw;
+    transition: color .2s ease-out;
+    width: 10vw
+}
+
+a:hover img {
+    opacity: .2;
+    transition: opacity .2s ease-out
+}
+
+a {
+    display: block;
+    overflow: hidden
+}
+
+h1 {
+    color: #222;
+    display: block;
+    float: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3vh;
+    font-weight: 400;
+    margin: 0!important;
+    vertical-align: middle;
+    width: 20vh;
+    transition: 0.2s;
+    margin-right: 18px;
+}
+h1:hover {
+ color:#00a1ff;
+ font-weight: 500;
+}
+.subhead {
+    color: #b1b1b1;
+    display: block;
+    float: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5vh;
+    font-weight: 400;
+    margin: 0!important;
+    padding-top: 1vh;
+    margin-top: .05vh;
+    vertical-align: middle;
+    width: 20vw
+}
+
+h2 {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    color: #222;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10vh;
+    font-weight: 400;
+    height: 10vh;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 17.5vh;
+    user-select: none;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 50
+}
+
+h3 {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    color: #6f6f6f;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3vh;
+    font-weight: 400;
+    height: 5vh;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 40vh;
+    user-select: none;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 49
+}
+
+.button {
+    color: #a2a2a2;
+    float: right;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1vw;
+    margin-top: .5vh;
+    padding: 0;
+    text-decoration: none;
+    transition: color .2s ease-out
+}
+
+.selected {
+    color: #222;
+    float: right;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1vw;
+    margin-top: .5vh;
+    padding: 0;
+    text-decoration: none;
+    transition: color .2s ease-out
+}
+
+.button:hover {
+    color: #222;
+    transition: color .2s ease-out
+}
+
+.content {
+    animation: load .4s ease-in 1;
+    padding: 0 2vw;
+    width: 100vw
+}
+
+.item {
+    float: left;
+    height: 45vh;
+    margin: 1vw;
+    margin-bottom: 2vw!important;
+    margin-top: 0;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    transition: opacity .2s ease-out;
+    width: 46vw
+}
+
+.item-img:hover {
+    opacity: .1;
+    transition: opacity .2s ease-out
+}
+
+a:hover h2 {
+    opacity: 1;
+    transition: opacity .2s ease-out
+}
+
+a:hover h3 {
+    opacity: 1;
+    transition: opacity .2s ease-out
+}
+
+a:hover .item-img {
+    opacity: .1;
+    transition: opacity .2s ease-out
+}
+
+.item-img {
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    height: 60vh;
+    margin-left: 50%;
+    margin-top: 25%;
+    transition: opacity .2s ease-out;
+    z-index: 10
+}
+
+@keyframes load {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
