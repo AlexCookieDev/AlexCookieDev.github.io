@@ -1,3 +1,5 @@
+
+
 html{
   width: auto;
   margin: 0;
@@ -6,6 +8,8 @@ html{
   -webkit-user-select: none;
   user-drag: none;
   -webkit-user-drag: none;
+  background-color: #36393e;
+  padding-bottom: 24px;
 }
 body {
   margin: 0;
@@ -19,8 +23,9 @@ body {
   box-sizing: border-box;
   width: 25%;
   height: 25vh;
-  background-color: white;
-  border: 0.1vh solid white ;
+  background-color: #36393e;
+  border-radius: 8px;
+  border: 4px solid #36393e;
   overflow: hidden;
 }
 .disabled_panel>img {
@@ -31,7 +36,9 @@ body {
   position:relative;
   float: none;
   width: 100%;
-  height: 10vh;
+  height: 6vh;
+  background-color: #2f3136;
+  border-bottom: 1px solid #424549;
 }
 .footer {
   display: block;
@@ -49,7 +56,8 @@ body {
   width: 25%;
   height: 25vh;
   background-color: black;
-  border: 0.1vh solid white ;
+  border-radius: 8px;
+  border: 4px solid #36393e ;
   overflow: hidden;
 }
 .panel_img {
@@ -77,7 +85,7 @@ h4 {
   text-align: center;
   vertical-align: middle;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #fff;
   font-size: 3vh;
   text-shadow: 0px 0px 4px #212121;
   opacity: 0;
@@ -89,12 +97,11 @@ h2 {
   margin: 0;
   text-align: center;
   vertical-align: middle;
-  font-family: 'Roboto', sans-serif;
-  color: #2b2b2b;
-  font-size: 4vh;
+  font-family: 'Ubuntu', sans-serif;
+  color: #c0bebb;
+  font-weight: 300;
+  font-size: 3vh;
   top: 50%;
-  left: 7.5%;
+  left: 3%;
   transform: translate(-50%, -50%);
 }
-
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
