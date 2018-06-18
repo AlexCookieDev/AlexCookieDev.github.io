@@ -1,135 +1,63 @@
-html{
-    height: 100%;
-    background-image: url(img/bg2.png);
-    background-size:auto 100%;
-    background-position: bottom;
-}
-body{
-}
-.bg {
-	width: 720px;
-	max-width: 720px;
-	overflow: auto;
-	margin: auto;
-    margin-top: 50px;
-    background-color: white;
-    border-radius: 4px;
-    animation: 1s ease-out 0s 1 opacite !important;
-}
-.bg_head {
-    height: 24px;
-    width: 100%;
-    background-color: #52ac62;
-    animation: 1s ease-out 0s 1 opacite !important;
-    
-}
-.prog_head {
-    height: 24px;
-    width: 100%;
-    background-color: #5274ac;
-    border-radius: 4px 4px 0 0;
-    animation: 1s ease-out 0s 1 opacite !important;
-    
-}
-.mod_head {
-    height: 24px;
-    width: 100%;
-    background-color: #ba3535;
-    border-radius: 4px 4px 0 0;
-    animation: 1s ease-out 0s 1 opacite !important;
-    
-}
-.game {
-	float: left;
-	height: 90px;
-	width: 90px;
-    animation: 1.5s ease-out 0s 1 opacite !important;
-    transition: background-color .1s ease-in;
-}
+html,body{height: 100%;width: 100%;margin: 0; overflow: hidden;}
 
-@keyframes opacite {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.header {
+  width: 100vw;
+  height: 12.5vh;
+  background-color: white;
 }
-@keyframes opacite2 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.panel {
+  display: block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  width: 25vw;
+  height: 25vh;
+  background-color: black;
+  border: 0.2vh solid white ;
+  overflow: hidden;
 }
-.game_img {
-	margin: 16px 0px 0px 21px;
-	height: 48px;
-	width: 48px;
+.panel_img {
+  position: absolute;
+  width: 125%;
+  opacity: 1;
+  transition: .1s ease-in;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-a {
-	text-decoration: none;
-    height: 0;
+.panel:hover .panel_img {
+  filter:blur(8px);
 }
-
-h1 {
-	font-family: "Trebuchet MS";
-	color: #444444;
-	font-size: 48px;
-	margin: auto;
-	margin-top:14px;
-	margin-bottom: 16px;
-	text-decoration: none;
-	text-align: center;
-}
-h2 {
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
-	font-size: 13px;
-	margin: 5px 0 0 8px;
-	position: absolute;
-	text-decoration: none;
-	text-align: center;
-}
-h3 {
-	font-family: 'Roboto', sans-serif;
-	color: #5c5c5c;
-	font-size: 10px;
-    margin: 0;
-    margin-top: 0px;
-	width: 90px;
-	text-align: center;
-	text-decoration: none;
-    line-height: 1;
-    vertical-align:middle;
-    display: table-cell;
+.panel:hover h4 {
+  opacity: 1;
 }
 h4 {
-	font-family: "Source Sans Pro Regular";
-	color: #999999;
-	font-size: 12px;
-	margin: auto;
-	margin-bottom:12px;
-	width: 90%;
-	text-align: center;
-	position: relative;
-	bottom:10px;
-	top:6px;
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 3vh;
+  opacity: 0;
+  transition: .1s ease-in;
 }
-/*Test*/
-.game_img:hover + .game {
-    background-color: #e8e8e8;
-}
-h3:hover + .game {
-    background-color: #e8e8e8;
-}
-.game:hover {
-    background-color: #e8e8e8;
+h1 {
+  display: block;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Roboto', sans-serif;
+  color: #2b2b2b;
+  font-size: 4vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
