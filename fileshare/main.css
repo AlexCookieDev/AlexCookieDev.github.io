@@ -1,19 +1,55 @@
-html,body{height: 100%;width: 100%;margin: 0; overflow: hidden;}
-
-.header {
-  width: 100vw;
-  height: 12.5vh;
+html{
+  width: auto;
+  margin: 0;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+body {
+  margin: 0;
+  width: auto;
+  position: relative;
+}
+.disabled_panel {
+  display: block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  width: 25%;
+  height: 25vh;
   background-color: white;
+  border: 0.1vh solid white ;
+  overflow: hidden;
+}
+.disabled_panel>img {
+  filter: brightness(0.2) grayscale(100%);
+}
+.header {
+  display: block;
+  position:relative;
+  float: none;
+  width: 100%;
+  height: 10vh;
+}
+.footer {
+  display: block;
+  position:inherit;
+  bottom: 0px;
+  float: none;
+  width: 100%;
+  height: 10vh;
 }
 .panel {
   display: block;
   float: left;
   position: relative;
   box-sizing: border-box;
-  width: 25vw;
+  width: 25%;
   height: 25vh;
   background-color: black;
-  border: 0.2vh solid white ;
+  border: 0.1vh solid white ;
   overflow: hidden;
 }
 .panel_img {
@@ -43,10 +79,11 @@ h4 {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 3vh;
+  text-shadow: 0px 0px 4px #212121;
   opacity: 0;
   transition: .1s ease-in;
 }
-h1 {
+h2 {
   display: block;
   position: relative;
   margin: 0;
@@ -56,7 +93,7 @@ h1 {
   color: #2b2b2b;
   font-size: 4vh;
   top: 50%;
-  left: 50%;
+  left: 7.5%;
   transform: translate(-50%, -50%);
 }
 
