@@ -33,8 +33,8 @@ body {
 }
 .contento {
   display: block;
-  overflow: scroll;
-  height: 96vh;
+  overflow: auto;
+  height: 94vh;
   width: 100vw;
   position: fixed;
 }
@@ -118,7 +118,12 @@ h2 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #36393e;
+    background: #2f3136;
+    border: 3px solid #36393e;
+    border-radius: 12px;
+}
+::-webkit-scrollbar-corner {
+  background: #36393e;
 }
 ::-webkit-scrollbar-button {
   display: none;
