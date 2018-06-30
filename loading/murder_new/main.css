@@ -1,0 +1,46 @@
+body,html {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    animation: load 5s ease-in 1;
+}
+video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 125%;
+  object-fit: fill;
+  opacity: 0.5;
+}
+.logo-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+}
+.logo-container img {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  animation: pulse 4s ease-in infinite;
+}
+
+
+@keyframes load {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

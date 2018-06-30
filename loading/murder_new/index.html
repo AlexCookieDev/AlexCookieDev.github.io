@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <audio id="bgm" autoplay hidden="hidden" src="music.mp3"></audio>
+        <audio id="bgma" autoplay hidden="hidden" src="amb.mp3" loop></audio>
+        <audio id="bgmc" autoplay hidden="hidden" src="car.mp3" loop></audio>
+        <video id="bgvid" src="bg.mp4" autoplay loop></video>
+        <div class="logo-container">
+          <img src="logo.png" alt="">
+        </div>
+    </body>
+</html>
+<script>
+  var vid = document.getElementById("bgvid");
+  vid.playbackRate = 0.25;
+  var mus = document.getElementById("bgm");
+  mus.volume = 0.25;
+  var amb = document.getElementById("bgma");
+  amb.volume = 0.1;
+  var car = document.getElementById("bgmc");
+  car.volume = 0.02;
+</script>
