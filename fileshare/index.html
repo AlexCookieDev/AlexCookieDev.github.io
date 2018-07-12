@@ -9,7 +9,7 @@
         <link rel="icon" href="img/discord.ico" type="image/x-icon">
 	</head>
 	<body onclick="resume()">
-        <audio id="bgm" src="img/shop.mp3" autoplay preload="auto" loop></audio>
+        <audio id="bgm" preload="auto" onended="shuffle()"></audio>
 
 				<div class="header">
 					<h2>Игры для нескольких игроков</h2>
@@ -136,8 +136,16 @@
         bgm = document.getElementById("bgm");
         bgm.volume=0.01;
 				bgm.src = "mp3/bg"+Math.floor(Math.random() * 10)+".mp3";
+
 				function resume() {
 					bgm.play();
-				}
+				};
+
+				function shuffle() {
+						bgm.pause();
+				    bgm.src = "mp3/bg"+Math.floor(Math.random() * 10)+".mp3";
+						bgm.load()
+						bgm.play();
+				};
     </script>
 </html>

@@ -1,30 +1,46 @@
-body {
+body,html {
+    position: absolute;
     height: 100%;
     width: 100%;
+    height: 100vh;
+    width: 100vw;
+    top:0;
     margin: 0;
-    background-image: url("bg.png");
-    background-repeat: repeat;
-    background-size: 100%;
-    animation: shiver 10s linear infinite;
-    -webkit-animation: shiver 10s linear infinite;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    animation: load 5s ease-in 1;
 }
-#logo {
-    width: 20%;
-    display: block;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 125%;
+  object-fit: fill;
+  opacity: 0.5;
 }
-#logo img {
-    width: 100%;
+.logo-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
 }
-@keyframes shiver {
-    0%   {background-size: 105%;}
-    50%  {background-size: 100%;}
-    100% {background-size: 105%;}
+.logo-container img {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  animation: pulse 4s ease-in infinite;
 }
--webkit-@keyframes shiver {
-    0%   {background-size: 105%;}
-    50%  {background-size: 100%;}
-    100% {background-size: 105%;}
+
+
+@keyframes load {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
 }

@@ -1,12 +1,17 @@
 @import "https://fonts.googleapis.com/css?family=Nunito";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 html,
 body {
+  top:0;
+  left: 0;
     display: block;
     height: 100%;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    width: 100%
+    width: 100%;
+    position: absolute;
 }
 
 .header {
@@ -16,32 +21,36 @@ body {
     height: 3vh;
     margin: 2.5vh auto 3vh auto;
     padding: 0 3vw;
-    user-select: none
+    user-select: none;
 }
 
 .contacts {
-    margin: 10vh auto;
-    width: 34vw
+    display: block;
+    position: fixed;
+    margin: 0 38.5vw;
+    bottom: 2vh;
+    width: 21vw
 }
 
 .contacts a {
     border-radius: 50%;
     float: left;
-    height: 10vw;
+    height: 6vw;
     margin: 0 .5vw;
-    transition: color .2s ease-out;
-    width: 10vw
+    transition: opacity .2s ease-out;
+    width: 6vw
 }
 
 .contacts a img {
     border-radius: 50%;
-    height: 10vw;
-    transition: color .2s ease-out;
-    width: 10vw
+    height: 6vw;
+    transition: opacity .2s ease-out;
+    width: 6vw;
+    opacity: 0.3;
 }
 
 a:hover img {
-    opacity: .2;
+    opacity: 1;
     transition: opacity .2s ease-out
 }
 
@@ -85,9 +94,9 @@ h2 {
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-    color: #222;
+    color: #fff;
     display: block;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 10vh;
     font-weight: 400;
     height: 10vh;
@@ -106,7 +115,7 @@ h3 {
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-    color: #6f6f6f;
+    color: #c1c1c1;
     display: block;
     font-family: 'Nunito', sans-serif;
     font-size: 3vh;
@@ -122,7 +131,16 @@ h3 {
     width: 100%;
     z-index: 49
 }
-
+.contacts h3 {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    color: #444;
+    top:0;
+    height: 6vh;
+    z-index: 0;
+    opacity: 1;
+    font-size: 2vh;
+}
 .button {
     color: #a2a2a2;
     float: right;
@@ -159,51 +177,140 @@ h3 {
 .content {
     animation: load .4s ease-in 1;
     padding: 0 2vw;
-    width: 100vw
+    width: 100% !important;
+    box-sizing: border-box;
+    position: relative;
+
 }
 
 .item {
     float: left;
     height: 45vh;
-    margin: 1vw;
+    margin: 1%;
     margin-bottom: 2vw!important;
     margin-top: 0;
     opacity: 1;
     overflow: hidden;
     position: relative;
-    transition: opacity .2s ease-out;
-    width: 46vw
+    transition: .2s ease-out;
+    width: 48%
 }
 
-.item-img:hover {
-    opacity: .1;
-    transition: opacity .2s ease-out
+.item:hover img {
+    filter: brightness(0.5);
+    height: 75vh;
+    transition: .2s ease-out;
+
 }
 
-a:hover h2 {
+.item:hover h2 {
     opacity: 1;
-    transition: opacity .2s ease-out
+    transition: .2s ease-out;
+    font-size: 10vh;
 }
 
-a:hover h3 {
+.item:hover h3 {
     opacity: 1;
-    transition: opacity .2s ease-out
+    transition: .2s ease-out;
+    font-size: 3vh;
 }
 
-a:hover .item-img {
-    opacity: .1;
-    transition: opacity .2s ease-out
-}
 
 .item-img {
     -webkit-transform: translateY(-50%) translateX(-50%);
     height: 60vh;
     margin-left: 50%;
     margin-top: 25%;
-    transition: opacity .2s ease-out;
+    transition: .2s ease-out;
     z-index: 10
 }
+form {
+  font-family: 'Roboto', sans-serif;
+  width: 30%;
+  margin:10vh auto;
+  display: block;
+}
+input[type="text"],input[type="email"] {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    transition: .2s ease-out;
+ }
+ input:focus {
+   outline-width: 0;
+ }
+input[type="submit"] {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+    font-size: 0.9em;
+    padding: 6px 16px;
+    color: #888;
+    border-radius: 4px;
+    border: none;
+    transition: .2s ease-out;
+    float: left;
+    margin: auto;
+    margin-top: 8px;
+}
+.activebtn:hover {
+    color: #fff;
+    border-radius: 4px;
+    background-color: #38d03e;
+}
+textarea {
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  height: 15vh;
+  resize: none;
+}
+form p {
+  padding: 8px 0;
+  margin:0;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 15px;
+    background: #fff
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+    border: 3px solid #fff;
+    border-radius: 12px;
+}
+::-webkit-scrollbar-corner {
+  background: #eee;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 9px;
+  background-color: #bbb;
+  border-radius: 12px;
+  border: 3px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 9px;
+  background: #aaa;
+  border-radius: 12px;
+  border: 3px solid #fff;
+}
 @keyframes load {
     0% {
         opacity: 0
