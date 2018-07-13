@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Karla');
 html,
 body {
-  top:0;
-  left: 0;
+    top:0;
+    left: 0;
     display: block;
     height: 100%;
     margin: 0;
@@ -65,7 +65,7 @@ h1 {
     float: left;
     font-family: 'Nunito', sans-serif;
     font-size: 3vh;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0!important;
     vertical-align: middle;
     width: 20vh;
@@ -73,8 +73,7 @@ h1 {
     margin-right: 18px;
 }
 h1:hover {
- color:#00a1ff;
- font-weight: 500;
+    color:#2196F3;
 }
 .subhead {
     color: #b1b1b1;
@@ -125,7 +124,7 @@ h3 {
     opacity: 0;
     position: absolute;
     text-align: center;
-    top: 40vh;
+    top: 50vh;
     user-select: none;
     vertical-align: middle;
     width: 100%;
@@ -192,27 +191,30 @@ h3 {
     opacity: 1;
     overflow: hidden;
     position: relative;
-    transition: .2s ease-out;
+    transition: .5s ease-in-out;
     width: 48%
 }
 
 .item:hover img {
     filter: brightness(0.5);
-    height: 75vh;
-    transition: .2s ease-out;
+    height: 70vh;
+    transition: .5s ease-in-out;
 
 }
 
 .item:hover h2 {
     opacity: 1;
-    transition: .2s ease-out;
+    transition: .5s ease-in-out;
     font-size: 10vh;
+    transition-delay:0.25s;
 }
 
 .item:hover h3 {
     opacity: 1;
-    transition: .2s ease-out;
+    transition: .5s ease-in-out;
     font-size: 3vh;
+    transition-delay:0.25s;
+    top: 40vh;
 }
 
 
@@ -221,7 +223,7 @@ h3 {
     height: 60vh;
     margin-left: 50%;
     margin-top: 25%;
-    transition: .2s ease-out;
+    transition: .5s ease-in-out;
     z-index: 10
 }
 form {
@@ -285,6 +287,9 @@ form p {
     background: #fff
 }
 
+
+
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: #fff;
@@ -318,4 +323,263 @@ form p {
     100% {
         opacity: 1
     }
+}
+@keyframes hsvran {
+    0% {
+        color: hsl(0, 50%, 50%);
+    }
+    10% {
+        color: hsl(36, 50%, 50%);
+    }
+    20% {
+        color: hsl(72, 50%, 50%);
+    }
+    30% {
+        color: hsl(108, 50%, 50%);
+    }
+    40% {
+        color: hsl(144, 50%, 50%);
+    }
+    50% {
+        color: hsl(180, 50%, 50%);
+    }
+    60% {
+        color: hsl(216, 50%, 50%);
+    }
+    70% {
+        color: hsl(252, 50%, 50%);
+    }
+    80% {
+        color: hsl(288, 50%, 50%);
+    }
+    90% {
+        color: hsl(324, 50%, 50%);
+    }
+    100% {
+        color: hsl(360,50%,50%);
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .header {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  h1 {
+      color: #222;
+      display: block;
+      float: left;
+      font-family: 'Nunito', sans-serif;
+      font-size: 5vh;
+      font-weight: 500;
+      margin: 0!important;
+      vertical-align: middle;
+      text-align: center;
+      width: 100vw;
+      transition: 0.2s;
+      margin-right: 18px;
+  }
+  h1:hover {
+      color:inherit;
+  }
+  .subhead {
+      color: #b1b1b1;
+      display: block;
+      float: left;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.5vh;
+      font-weight: 400;
+      margin: 0!important;
+      padding-top: 1vh;
+      margin-top: .05vh;
+      vertical-align: middle;
+      width: 20vw
+  }
+  .button {
+    float: right;
+    font-size: 2vh;
+    padding: 2vh 0;
+    width: 33.3vw;
+    margin: 0;
+    text-align: center;
+  }
+
+  h2 {
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      color: #fff;
+      font-family: 'Karla', sans-serif;
+      font-size: 5vh;
+      height: 5vh;
+      font-weight: 400;
+      margin: 0;
+      opacity: 1;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      user-select: none;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 50;
+      transform: translateY(-50%) translateX(-50%);
+  }
+
+  h3 {
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      color: #c1c1c1;
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-size: 2vh;
+      font-weight: 400;
+      height: 5vh;
+      margin: 0;
+      opacity: 1;
+      position: absolute;
+      text-align: center;
+      top:85%;
+      user-select: none;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 49
+  }
+  .contacts h3 {
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      color: #444;
+      top:0;
+      height: 6vh;
+      z-index: 0;
+      opacity: 1;
+      font-size: 2vh;
+  }
+  .subhead {display: none;}
+
+  .item {
+      float: left;
+      height: 30vh;
+      margin: 1vh;
+      margin-top: 0;
+      opacity: 1;
+      overflow: hidden;
+      position: relative;
+      transition: .5s ease-in-out;
+      width: 96%;
+  }
+
+  .item:hover img {height: auto;width: auto;}
+  .item:hover h2 {height: 10vh;font-size: 5vh;}
+  .item:hover h3 {height: 5vh;font-size: 3vh;}
+
+  .item-img {
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      width: 125vw;
+      height: auto;
+      margin-left: 50%;
+      margin-top: 25%;
+      transition: .5s ease-in-out;
+      z-index: 10;
+      filter: brightness(50%);
+  }
+
+  form {
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    margin:10vh auto;
+    display: block;
+    font-size: 3vh;
+  }
+  input[type="text"],input[type="email"] {
+      float: left;
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.5vh;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 1vh;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1vh;
+      transition: .2s ease-out;
+   }
+   input:focus {
+     outline-width: 0;
+   }
+  input[type="submit"] {
+      font-family: 'Roboto', sans-serif;
+      background-color: #eee;
+      font-size: 0.9em;
+      padding: 1vh 0;
+      width: 100%;
+      color: #888;
+      border-radius: 4px;
+      border: none;
+      transition: .2s ease-out;
+      float: left;
+      margin: auto;
+      margin-top: 8px;
+      box-sizing: border-box;
+  }
+  .activebtn:hover {
+      color: #fff;
+      border-radius: 4px;
+      background-color: #38d03e;
+  }
+  textarea {
+    float: left;
+    font-size: 2.5vh;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1vh;
+    height: 15vh;
+    resize: none;
+  }
+  form p {
+    padding: 8px 0;
+    margin:0;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .contacts {
+      display: block;
+      position: fixed;
+      margin: 0 24.5vw;
+      bottom: 2vh;
+      width: 51vw
+  }
+
+  .contacts a {
+      border-radius: 50%;
+      float: left;
+      height: 16vw;
+      width: 16vw;
+      margin: 0 .5vw;
+      transition: opacity .2s ease-out;
+  }
+
+  .contacts a img {
+      border-radius: 50%;
+      height: 16vw;
+      width: 16vw;
+      transition: opacity .2s ease-out;
+      opacity: .8;
+  }
+  .contacts h3 {
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      color: #444;
+      top:0;
+      height: 4vh;
+      z-index: 0;
+      opacity: 1;
+      font-size: 2vh;
+  }
 }
