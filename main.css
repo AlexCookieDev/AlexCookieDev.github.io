@@ -176,7 +176,7 @@ h3 {
 .content {
     animation: load .4s ease-in 1;
     padding: 0 2vw;
-    width: 100% !important;
+    width: 100%;
     box-sizing: border-box;
     position: relative;
 
@@ -363,6 +363,7 @@ form p {
 @media only screen and (max-device-width: 768px) {
   .header {
     width: 100vw;
+    height: auto;
     box-sizing: border-box;
     padding: 0;
   }
@@ -371,7 +372,7 @@ form p {
       display: block;
       float: left;
       font-family: 'Nunito', sans-serif;
-      font-size: 5vh;
+      font-size: 10vw;
       font-weight: 500;
       margin: 0!important;
       vertical-align: middle;
@@ -398,7 +399,7 @@ form p {
   }
   .button {
     float: right;
-    font-size: 2vh;
+    font-size: 4vw;
     padding: 2vh 0;
     width: 33.3vw;
     margin: 0;
@@ -458,22 +459,21 @@ form p {
       font-size: 2vh;
   }
   .subhead {display: none;}
-
+  .content {padding: 0;margin: 0;width: 100vw;height: auto;position: relative;}
   .item {
       float: left;
       height: 30vh;
-      margin: 1vh;
-      margin-top: 0;
+      margin: 0 2vw 1vw 2vw;
       opacity: 1;
       overflow: hidden;
       position: relative;
       transition: .5s ease-in-out;
-      width: 96%;
+      width: 96vw;
   }
 
-  .item:hover img {height: auto;width: auto;}
-  .item:hover h2 {height: 10vh;font-size: 5vh;}
-  .item:hover h3 {height: 5vh;font-size: 3vh;}
+  .item:hover img {height: inherit;width: inherit;}
+  .item:hover h2 {height: 5vh;font-size: 5vh;}
+  .item:hover h3 {height: 3vh;font-size: 3vh;}
 
   .item-img {
       -webkit-transform: translateY(-50%) translateX(-50%);
@@ -489,17 +489,17 @@ form p {
   form {
     font-family: 'Roboto', sans-serif;
     width: 80%;
-    margin:10vh auto;
+    margin:40px auto;
     display: block;
-    font-size: 3vh;
+    font-size: 4vw;
   }
   input[type="text"],input[type="email"] {
       float: left;
       font-family: 'Nunito', sans-serif;
-      font-size: 2.5vh;
+      font-size: 4vw;
       border-radius: 4px;
-      border: 1px solid #ddd;
-      padding: 1vh;
+      border: 1.5px solid #ddd;
+      padding: 16px;
       width: 100%;
       box-sizing: border-box;
       margin-bottom: 1vh;
@@ -512,7 +512,7 @@ form p {
       font-family: 'Roboto', sans-serif;
       background-color: #eee;
       font-size: 0.9em;
-      padding: 1vh 0;
+      padding: 16px 0;
       width: 100%;
       color: #888;
       border-radius: 4px;
@@ -530,11 +530,11 @@ form p {
   }
   textarea {
     float: left;
-    font-size: 2.5vh;
+    font-size: 4vw;
     font-family: 'Nunito', sans-serif;
     border-radius: 4px;
-    border: 1px solid #ddd;
-    padding: 6px;
+    border: 1.5px solid #ddd;
+    padding: 16px;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 1vh;
@@ -551,9 +551,10 @@ form p {
   .contacts {
       display: block;
       position: fixed;
-      margin: 0 24.5vw;
-      bottom: 2vh;
-      width: 51vw
+      margin: 0;
+      left: 24.5vw;
+      bottom: 20px;
+      width: 51vw;
   }
 
   .contacts a {
