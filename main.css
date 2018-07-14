@@ -33,20 +33,21 @@ body
 .contacts
 {
     position: fixed;
+    left: 0;
     bottom: 2vh;
 
     display: block;
 
-    width: 21vw;
-    margin: 0 38.5vw;
+    width: 12vw;
+    margin: 0 44vw;
 }
 
 .contacts a
 {
     float: left;
 
-    width: 6vw;
-    height: 6vw;
+    width: 3vw;
+    height: 3vw;
     margin: 0 .5vw;
 
     transition: opacity .2s ease-out;
@@ -56,8 +57,8 @@ body
 
 .contacts a img
 {
-    width: 6vw;
-    height: 6vw;
+    width: 3vw;
+    height: 3vw;
 
     transition: opacity .2s ease-out;
 
@@ -181,7 +182,7 @@ h3
     z-index: 0;
     top: 0;
 
-    height: 6vh;
+    height: 5vh;
 
     opacity: 1;
     color: #444;
@@ -485,7 +486,7 @@ form p
     }
 }
 
-@media only screen and (max-device-width: 768px)
+@media only screen and (max-device-width: 1080px)
 {
     .header
     {
@@ -504,14 +505,17 @@ form p
         float: left;
 
         width: 100vw;
+        height: 10.5vw;
         margin: 0!important;
         margin-right: 18px;
+        margin-bottom: 0;
+        padding: 0;
 
         transition: .2s;
         text-align: center;
         vertical-align: middle;
 
-        color: #222;
+        color: #444;
     }
     h1:hover
     {
@@ -520,17 +524,16 @@ form p
     .subhead
     {
         font-family: 'Nunito', sans-serif;
-        font-size: 1.5vh;
-        font-weight: 400;
+        font-size: 3.5vw;
+        font-weight: lighter;
 
         display: block;
         float: left;
 
-        width: 20vw;
+        width: 100vw;
         margin: 0!important;
-        margin-top: .05vh;
-        padding-top: 1vh;
 
+        text-align: center;
         vertical-align: middle;
 
         color: #b1b1b1;
@@ -551,7 +554,7 @@ form p
     h2
     {
         font-family: 'Karla', sans-serif;
-        font-size: 5vh;
+        font-size: 11vw;
         font-weight: 400;
 
         position: absolute;
@@ -560,7 +563,7 @@ form p
         left: 50%;
 
         width: 100%;
-        height: 5vh;
+        height: 11vw;
         margin: 0;
 
         -webkit-user-select: none;
@@ -578,7 +581,7 @@ form p
     h3
     {
         font-family: 'Nunito', sans-serif;
-        font-size: 2vh;
+        font-size: 4vw;
         font-weight: 400;
 
         position: absolute;
@@ -604,7 +607,7 @@ form p
     .contacts h3
     {
         font-family: 'Roboto', sans-serif;
-        font-size: 2vh;
+        font-size: 4vw;
 
         position: relative;
         z-index: 0;
@@ -614,10 +617,6 @@ form p
 
         opacity: 1;
         color: #444;
-    }
-    .subhead
-    {
-        display: none;
     }
     .content
     {
@@ -639,27 +638,29 @@ form p
         height: 30vh;
         margin: 0 2vw 1vw 2vw;
 
-        transition: .5s ease-in-out;
+        transition: .2s ease-in-out;
 
         opacity: 1;
     }
 
     .item:hover img
     {
-        width: inherit;
+        width: 125vw;
         height: inherit;
+        filter: none;
     }
     .item:hover h2
     {
-        font-size: 5vh;
-
-        height: 5vh;
+        font-size: 11vw;
+        height: 11vw;
+        opacity: 0;
     }
     .item:hover h3
     {
-        font-size: 3vh;
-
-        height: 3vh;
+        font-size: 4vw;
+        height: 4vw;
+        top: 85%;
+        opacity: 0;
     }
 
     .item-img
@@ -671,7 +672,7 @@ form p
         margin-top: 25%;
         margin-left: 50%;
 
-        transition: .5s ease-in-out;
+        transition: .2s ease-in-out;
         -webkit-transform: translateY(-50%) translateX(-50%);
 
         filter: brightness(50%);
@@ -811,4 +812,67 @@ form p
         opacity: 1;
         color: #444;
     }
+}
+@media (orientation: landscape) and (max-device-width: 720px) {
+  h1 {
+    height: 7vw;
+    font-size: 7vw;
+  }
+  h2 {
+    height: 6.25vw;
+    font-size: 6.25vw;
+  }
+  h3 {
+    height: 2vw;
+    font-size: 2.5vw;
+  }
+
+  .button {
+    height: 4vw;
+    font-size: 3vw;
+  }
+  .item {
+    width: 48vw;
+    height: 50vh;
+    margin: 0 1vw 1vw 1vw;
+  }
+  .item a img {
+    width: 60vw;
+  }
+
+  form {
+    font-size: 2.5vw;
+  }
+  input[type='text'],
+  input[type='email']
+  {
+      font-family: 'Nunito', sans-serif;
+      font-size: 3vw;
+
+      float: left;
+
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 1vh;
+      padding: 8px;
+
+      transition: .2s ease-out;
+
+      border: 1.5px solid #ddd;
+      border-radius: 4px;
+  }
+  textarea {
+    font-size: 3vw;
+    height: 20vw;
+  }
+  input[type='submit'] {
+    width: 30vw;
+  }
+  .contacts {
+    margin-bottom: 10px;
+  }
+  .contacts h3 {
+    height: 4vw;
+    color: #888;
+  }
 }
