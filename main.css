@@ -837,7 +837,8 @@ form p
     margin: 0 1vw 1vw 1vw;
   }
   .item a img {
-    width: 60vw;
+    width: auto;
+    height: 70vw;
   }
 
   form {
