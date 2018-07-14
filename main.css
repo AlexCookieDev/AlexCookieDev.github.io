@@ -813,7 +813,7 @@ form p
         color: #444;
     }
 }
-@media (orientation: landscape) and (max-device-width: 1080px) {
+@media (min-aspect-ratio: 13/9) and (max-device-width: 1080px) {
   h1 {
     height: 7vw;
     font-size: 7vw;
