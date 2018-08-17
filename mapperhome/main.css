@@ -1,33 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .bg {
-	width: 642px;
-	max-width: 642px;
+	width: 576px;
+	max-width: 576px;
 	overflow: auto;
 	margin: auto;
 
 }
 .pack {
 	float: left;
-	margin: 10px;
 	height: 192px;
 	width: 192px;
-	border-radius: 6px;
-	border: 1px solid #757575;
+	background-color:white;
+	overflow: hidden;
+	transition: ease-in-out .2s;
 }
 .pack_img {
 	margin: 32px;
 	height: 128px;
 	width: 128px;
+	opacity: .8;
+	transition: ease-in-out .2s;
 }
-.pack_img:hover {
-	-webkit-filter: opacity(80%);
-	filter: opacity(80%);
+.pack:hover {
+	background-color:#f1f1f1;
+	transition: ease-in-out .2s;
+}
+.pack:hover .pack_img {
+	opacity: 1;
 }
 a {
 	text-decoration: none;
 }
-
 h1 {
 	font-family: 'Roboto', sans-serif;
 	color: #444444;
@@ -50,6 +54,7 @@ h2 {
 }
 h3 {
 	font-family: 'Roboto', sans-serif;
+	font-weight: 500 !important;
 	color: #444444;
 	font-size: 16px;
 	margin-top:-32px;
@@ -67,6 +72,5 @@ h4 {
 	text-align: center;
 	position: relative;
 	bottom:10px;
-	top:6px;
+	top:12px;
 }
-/*Test*/
