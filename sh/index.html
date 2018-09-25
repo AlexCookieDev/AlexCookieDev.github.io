@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <meta name="theme-color" content="#D9534F">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script src="vue.min.js"></script>
+
+    <title>Secret Hitler</title>
+
+    <link rel="icon" href="icon.png">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Merriweather');
+    #app {
+      padding-top: 15px;
+      font-family: 'Google Sans';
+    }
+    .btn {
+      font-family: 'Google Sans';
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 34px;
+      font-family: 'Merriweather', serif !important;
+      font-weight: 700;
+    }
+    p {
+      text-align: center;
+      vertical-align: middle;
+      height: 100%;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    #main_menu {
+      max-width: 425px;
+      min-width: 370px;
+    }
+    #main {
+      max-width: 600px;
+      min-width: 370px;
+    }
+    #standard {
+      padding-top: 10px;
+    }
+    #rt_size {
+      font-size: 300%;
+      margin: 10px;
+      padding-top: 15%;
+      width: 315px;
+      height: 415px;
+    }
+    #role_text {
+      border: 5px solid #f7f7f9;
+      font-size: 300%;
+      margin: 10px;
+      padding-top: 15%;
+      width: 315px;
+      height: 415px;
+      vertical-align: middle;
+    }
+    #role_text_blank {
+      border: 5px solid #f7f7f9;
+      margin: 10px;
+      width: 315px;
+      height: 415px;
+    }
+    #next_button {
+      padding-top: 10px;
+    }
+    #enter_btn {
+      margin-left: 10px;
+      padding: 12px 24px;
+      box-sizing: content-box;
+      width: 30px;
+      text-align: center;
+    }
+    #inputplayers {
+      border: 4px solid #f7f7f9;
+      border-radius: 3px;
+      padding: 25px;
+    }
+    #actions_box {
+      border: 4px solid #f7f7f9;
+      border-radius: 3px;
+      padding: 15px;
+    }
+    .container-fluid {
+      margin: 3px;
+    }
+    #f_slot {
+      border: 2px solid #82121b;
+      height: 85px;
+      width: 100%;
+      border-radius: 3px;
+      padding-top: 5px;
+    }
+    #l_slot {
+      border: 2px solid #002752;
+      height: 65px;
+      width: 100%;
+      padding-top: 5px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    #policies {
+      padding: 25px;
+      margin-left: 3px;
+      margin-right: 4px;
+      background: white;
+    }
+    #fascist_slots {
+      padding: 0px;
+      margin-bottom: 20px;
+    }
+    #liberal_slots {
+      padding: 0px;
+    }
+    #discard_text {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    #num_policies_left {
+      margin-top: 20px;
+    }
+    .l_filled {
+      background-color: #B8DAFF;
+    }
+    .f_filled {
+      background-color: #F8D7DA;
+    }
+    #help {
+      margin-top: 15px;
+    }
+    .l_color {
+      color: #002752;
+    }
+    .f_color {
+      color: #82121b;
+    }
+    .h_color {
+      color: #ba7415;
+    }
+    </style>
+
+  </head>
+
+<body>
+<div id="app">
+
+  <div class="d-flex justify-content-center">
+    	<h2><b>СЕКРЕТНЫЙ ГИТЛЕР</b></h2>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="container-fluid" id="main_menu" v-show="show_inputplayers">
+
+      <div class="container-fluid" id="inputplayers" v-show="show_inputplayers">
+        <div class="d-flex justify-content-center"><h4><b>Количество игроков</b></h4></div>
+        <div class="d-flex justify-content-center" id="standard">
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_5">5</button>
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_6">6</button>
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_7">7</button>
+        </div>
+        <div class="d-flex justify-content-center" id="standard">
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_8">8</button>
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_9">9</button>
+          <button type="button" class="btn btn-outline-danger btn-lg" id="enter_btn" @click="start_10">10</button>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="help">
+      <hr>
+      <p class="small"><b>By AlexCookie</b></p>
+      </p>
+      </div>
+
+    </div>
+
+     <div class="container-fluid" id="roles" v-show="show_roles">
+      <div class="container-fluid" id="rolecard" v-show="show_flip">
+        <div class="card card-inverse mb-3 text-center" id="rt_size" style="background-color: white; color: black;" @click="flip"></div>
+        <div class="d-flex justify-content-center" id="next_button">
+          <button type="button" class="btn btn-outline-secondary btn-lg" @click="flip">Перевернуть</button>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="rolecard" v-show="show_rolecard">
+        <div class="card card-inverse mb-3 text-center" id="rt_size" style="background-color: white;" v-bind:class="{ f_color : (role=='Фашист'), l_color : (role=='Либерал'), h_color : (role=='Гитлер'), 'card-primary' : (role=='Либерал'), 'card-danger' : (role=='Фашист'), 'card-warning' : (role=='Hitler') }" @click="next_role"><b>{{role}}</b></div>
+        <div class="d-flex justify-content-center" id="next_button">
+          <button type="button" class="btn btn-outline-success btn-lg" @click="next_role">Следующая карта</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+  <div class="container-fluid" id="main" v-show="show_main" style="padding: 1px;">
+
+    <div class="container-fluid" id="liberal_slots">
+      <div class="d-flex justify-content-center">
+        <div class="container-fluid" id="l_slot" v-bind:class="{ l_filled : liberal_slots[0] }"></div>
+        <div class="container-fluid" id="l_slot" v-bind:class="{ l_filled : liberal_slots[1] }"></div>
+        <div class="container-fluid" id="l_slot" v-bind:class="{ l_filled : liberal_slots[2] }"></div>
+        <div class="container-fluid" id="l_slot" v-bind:class="{ l_filled : liberal_slots[3] }"></div>
+        <div class="container-fluid" id="l_slot" v-bind:class="{ l_filled : liberal_slots[4] }">
+          <p>Либералы победили!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="fascist_slots" v-if="show_fascist_5_6">
+      <div class="d-flex justify-content-center">
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[0] }"></div>
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[1] }"></div>
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[2] }">
+        <p>Президент проверяет 3 верхних карты</p></div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[3] }">
+        <p>Президент убивает игрока.</p></div>
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[4] }">
+        <p>Президент убивает игрока.<br>Доступно вето.</p></div>
+        <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[5] }"><p>Победа фашистов!</p></div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="fascist_slots" v-if="show_fascist_7_8">
+      <div class="d-flex justify-content-center">
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[0] }"></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[1] }">
+       <p>President investigates an identity</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[2] }">
+       <p>President chooses next President</p></div>
+      </div>
+      <div class="d-flex justify-content-center">
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[3] }">
+       <p>President must kill player</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[4] }">
+       <p>President must kill player. Veto unlocked</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[5] }"><p>Fascists Win</p></div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="fascist_slots" v-if="show_fascist_9_10">
+      <div class="d-flex justify-content-center">
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[0] }">
+       <p>President investigates an identity</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[1] }">
+       <p>President investigates an identity</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[2] }">
+       <p>President chooses next President</p></div>
+      </div>
+      <div class="d-flex justify-content-center">
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[3] }">
+       <p>President must kill player</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[4] }">
+       <p>President must kill player. Veto unlocked</p></div>
+       <div class="container-fluid" id="f_slot" v-bind:class="{ f_filled : fascist_slots[5] }"><p>Fascists Win</p></div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="actions_box">
+		<div class="container-fluid" v-show="show_chancellor_confirm">
+			<div class="d-flex justify-content-center">
+      	<h3><b>Выберите канцлера</b></h3>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-info btn-lg" @click="confirm_chancellor">Готово</button>
+      </div>
+
+      <div class="d-flex justify-content-center" id="num_policies_left">
+        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Polcies Left in Draw Pile</b></h6>
+      </div>
+      <div class="d-flex justify-content-center" id="num_policies_left" style="margin-top: -5px">
+        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Polcies in Discard</b></h6>
+      </div>
+    </div>
+
+    <div class="container-fluid" v-show="show_draw">
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-success btn-lg" @click="draw_3">Взять три</button>
+      </div>
+
+      <div class="d-flex justify-content-center" id="num_policies_left">
+        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Polcies Left in Draw Pile</b></h6>
+      </div>
+      <div class="d-flex justify-content-center" id="num_policies_left" style="margin-top: -5px">
+        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Polcies in Discard</b></h6>
+      </div>
+    </div>
+
+
+    <div class="container-fluid" v-if="show_shuffle">
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-info btn-lg" @click="randomize_policies">Перемешать колоду</button>
+      </div>
+      <div class="d-flex justify-content-center" id="num_policies_left">
+        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Polcies Left in Draw Pile</b></h6>
+      </div>
+      <div class="d-flex justify-content-center" id="num_policies_left" style="margin-top: -5px">
+        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Polcies in Discard</b></h6>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center" v-if="show_policies" id="discard_text"><h3><b>Tap to <font color="#500000">Убрать</font></b></h3></div>
+
+    <div class="d-flex justify-content-center" v-if="show_policies">
+      <div class="card card-inverse mb-3 text-center" id="policies" v-show="show_policy_1" v-bind:class="{ f_color : (drawn_policies[0]=='Фашист'), l_color : (drawn_policies[0]=='Либерал'), '' : (drawn_policies[0]=='Либерал'), '' : (drawn_policies[0]=='Фашист') }" @click="discard_1"><b>{{drawn_policies[0]}}</b></div>
+      <div class="card card-inverse mb-3 text-center" id="policies" v-show="show_policy_2" v-bind:class="{ f_color : (drawn_policies[1]=='Фашист'), l_color : (drawn_policies[1]=='Либерал'), '' : (drawn_policies[1]=='Либерал'), '' : (drawn_policies[1]=='Фашист') }" @click="discard_2"><b>{{drawn_policies[1]}}</b></div>
+      <div class="card card-inverse mb-3 text-center" id="policies" v-show="show_policy_3" v-bind:class="{ f_color : (drawn_policies[2]=='Фашист'), l_color : (drawn_policies[2]=='Либерал'), '' : (drawn_policies[2]=='Либерал'), '' : (drawn_policies[2]=='Фашист') }" @click="discard_3"><b>{{drawn_policies[2]}}</b></div>
+    </div>
+
+    <div class="container-fluid" v-if="show_policies">
+      <div class="d-flex justify-content-center" @click="veto" v-if="show_veto">
+        <button type="button" class="btn btn-outline-danger btn-lg" style="margin-top: 10px;" @click="veto">Вето</button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center" v-if="show_liberal_win">
+      <div class="container-fluid">
+        <h3><b><font color="#002752">Liberals Win!</font></b></h3><p class="small">Refresh to play again!</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" v-if="show_fascist_win">
+      <div class="container-fluid">
+        <h3><b><font color="#82121b">Fascists Win!</font></b></h3><p class="small">Refresh to play again!</p>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center" v-if="show_examine_all">
+
+      <div class="d-flex justify-content-center" v-if="show_examine1" @click="show_next_examine" style="margin-top: 15px;">
+        <p><h4><b>Examine next 3 policy cards</b></h4></p>
+      </div>
+
+      <div class="container-fluid" v-if="show_examine2" @click="dismiss_examine" style="margin-top: 15px;">
+        <div class="d-flex justify-content-center"><h4><b>Сбросить карты</b></h4></div>
+        <div class="d-flex justify-content-center">
+          <div class="card card-inverse mb-3 text-center" id="policies" v-bind:class="{ f_color : (policies_list[0]=='Фашист'), l_color : (policies_list[0]=='Либерал'), '' : (policies_list[0]=='Либерал'), '' : (policies_list[0]=='Фашист') }"><b>{{policies_list[0]}}</b></div>
+          <div class="card card-inverse mb-3 text-center" id="policies" v-bind:class="{ f_color : (policies_list[1]=='Фашист'), l_color : (policies_list[1]=='Либерал'), '' : (policies_list[1]=='Либерал'), '' : (policies_list[1]=='Фашист') }"><b>{{policies_list[1]}}</b></div>
+          <div class="card card-inverse mb-3 text-center" id="policies" v-bind:class="{ f_color : (policies_list[2]=='Фашист'), l_color : (policies_list[2]=='Либерал'), '' : (policies_list[2]=='Либерал'), '' : (policies_list[2]=='Фашист') }"><b>{{policies_list[2]}}</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="app.js"></script>
+
+</html>
