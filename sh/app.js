@@ -149,9 +149,9 @@ var app = new Vue({
 
     randomize_policies: function() {
       this.policies_list_temp = [
-      "Fascist","Fascist","Fascist","Fascist","Fascist","Fascist",
-      "Fascist","Fascist","Fascist","Fascist","Fascist",
-      "Liberal","Liberal","Liberal","Liberal","Liberal","Liberal"]
+      "Фашист","Фашист","Фашист","Фашист","Фашист","Фашист",
+      "Фашист","Фашист","Фашист","Фашист","Фашист",
+      "Либерал","Либерал","Либерал","Либерал","Либерал","Либерал"]
 
       for (i = 0; i < this.played_policy_list.length; i++) {
         index = this.policies_list_temp.indexOf(this.played_policy_list[i])
@@ -268,20 +268,20 @@ var app = new Vue({
     },
 
     play_policy: function() {
-      if (this.played_policy == "Fascist") {
+      if (this.played_policy == "Фашист") {
         this.fascist_slots[this.fascist_slot_tracker] = true
         this.fascist_slot_tracker += 1
-        this.played_policy_list.push("Fascist")
+        this.played_policy_list.push("Фашист")
         if (this.fascist_slot_tracker == 5) {
           this.enable_veto = true
         }
         if (this.fascist_slot_tracker == 6) {
           this.fascist_win()
         }
-      } else if ((this.played_policy == "Liberal")) {
+      } else if ((this.played_policy == "Либерал")) {
         this.liberal_slots[this.liberal_slot_tracker] = true
         this.liberal_slot_tracker += 1
-        this.played_policy_list.push("Liberal")
+        this.played_policy_list.push("Либерал")
         if (this.liberal_slot_tracker == 5) {
           this.liberal_win()
         }

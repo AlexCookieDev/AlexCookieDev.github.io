@@ -276,23 +276,23 @@
       </div>
 
       <div class="d-flex justify-content-center" id="num_policies_left">
-        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Polcies Left in Draw Pile</b></h6>
+        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Законов в колоде</b></h6>
       </div>
       <div class="d-flex justify-content-center" id="num_policies_left" style="margin-top: -5px">
-        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Polcies in Discard</b></h6>
+        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Законов в бите</b></h6>
       </div>
     </div>
 
     <div class="container-fluid" v-show="show_draw">
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-outline-success btn-lg" @click="draw_3">Взять три</button>
+        <button type="button" class="btn btn-outline-success btn-lg" @click="draw_3">Взять три карты</button>
       </div>
 
       <div class="d-flex justify-content-center" id="num_policies_left">
-        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Polcies Left in Draw Pile</b></h6>
+        <h6><b><font color="#5CB85C">{{num_policies_left}}</font> Законов в колоде</b></h6>
       </div>
       <div class="d-flex justify-content-center" id="num_policies_left" style="margin-top: -5px">
-        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Polcies in Discard</b></h6>
+        <h6><b><font color="#D9534F">{{num_policies_discarded}}</font> Законов в бите</b></h6>
       </div>
     </div>
 
@@ -309,7 +309,7 @@
       </div>
     </div>
 
-    <div class="d-flex justify-content-center" v-if="show_policies" id="discard_text"><h3><b>Tap to <font color="#500000">Убрать</font></b></h3></div>
+    <div class="d-flex justify-content-center" v-if="show_policies" id="discard_text"><h3><b>Нажмите, чтобы <font color="#500000">Убрать</font></b></h3></div>
 
     <div class="d-flex justify-content-center" v-if="show_policies">
       <div class="card card-inverse mb-3 text-center" id="policies" v-show="show_policy_1" v-bind:class="{ f_color : (drawn_policies[0]=='Фашист'), l_color : (drawn_policies[0]=='Либерал'), '' : (drawn_policies[0]=='Либерал'), '' : (drawn_policies[0]=='Фашист') }" @click="discard_1"><b>{{drawn_policies[0]}}</b></div>
@@ -319,7 +319,7 @@
 
     <div class="container-fluid" v-if="show_policies">
       <div class="d-flex justify-content-center" @click="veto" v-if="show_veto">
-        <button type="button" class="btn btn-outline-danger btn-lg" style="margin-top: 10px;" @click="veto">Вето</button>
+        <button type="button" class="btn btn-outline-danger btn-lg" style="margin-top: 10px;" @click="veto">Вето!</button>
       </div>
     </div>
 
@@ -337,7 +337,7 @@
     <div class="d-flex justify-content-center" v-if="show_examine_all">
 
       <div class="d-flex justify-content-center" v-if="show_examine1" @click="show_next_examine" style="margin-top: 15px;">
-        <p><h4><b>Examine next 3 policy cards</b></h4></p>
+        <p><h4><b>Просмотрите три карты</b></h4></p>
       </div>
 
       <div class="container-fluid" v-if="show_examine2" @click="dismiss_examine" style="margin-top: 15px;">
