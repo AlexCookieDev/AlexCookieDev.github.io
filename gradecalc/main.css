@@ -64,19 +64,21 @@ h3 {
 }
 .gradebox h3 {
   width:50vw;
-  height: 15vw;
+  height: 10vw;
   padding: 0;
   margin: 0;
+  padding-top: 5vw;
 }
 .gradebox p {
   font-family: "Google Sans";
   font-size: 16vw;
   width: 50vw;
-  height: 35vw;
+  height: 30vw;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
   margin: 0;
+  padding-bottom: 5vw;
 }
 .chetverki,.pyaterki {
   padding: 0;
