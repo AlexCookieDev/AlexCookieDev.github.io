@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Калькулятор оценок</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="heading"><h2>СКОЛЬКО ЕЩЕ?</h2></div>
+    <div class="box">
+      <input id="scoreinput" type="text" placeholder="Введите оценки" oninput="CalculateFix()" onchange="CalculateFix()">
+      <h3>СРЕДНИЙ БАЛЛ</h3>
+      <p id="avgscore">0.00</p><br>
+    </div>
+    <div class="heading chetverki"><h2>ДО ЧЕТВЕРКИ</h2></div>
+    <div class="chetverki box">
+      <div class="gradebox">
+        <p id="fours">0</p>
+        <h3>четверок</h3>
+      </div>
+      <div class="gradebox">
+        <p id="fives1">0</p>
+        <h3>пятерок</h3>
+      </div>
+    </div>
+    <div class="heading pyaterki"><h2>ДО ПЯТЕРКИ</h2></div>
+    <div class="pyaterki box">
+      <div class="gradebox">
+        <p id="fives2">0</p>
+        <h3>пятерок</h3>
+      </div>
+    </div>
+  </body>
+</html>
