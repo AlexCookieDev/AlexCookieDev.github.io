@@ -9,16 +9,16 @@ body {
 .heading {
   position: relative;
   width:100vw;
-  height: 10vh;
+  height: 20vw;
   background-color: black;
   color: white;
-  font-size: 3.5vh;
+  font-size: 7vw;
 }
 .heading h2 {
   position: absolute;
   width: 100vw;
   transform: translate(-50%,-50%);
-  margin: 5vh 50vw;
+  margin: 10vw 50vw;
   text-align: center;
   font-family: "Google Sans";
 }
@@ -32,26 +32,26 @@ body {
 }
 #scoreinput {
   font-family: "Google Sans";
-  font-size: 3.5vh;
+  font-size: 6vw;
   width: 80vw;
   padding: 2vw;
   border: none;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid black;
   margin: 0 10vw;
 }
 h3 {
   font-family: "Google Sans";
-  font-size: 3.2vh;
+  font-size: 6vw;
   width: 100vw;
   text-align: center;
 }
 #avgscore {
   position: relative;
   font-family: "Google Sans";
-  font-size: 8vh;
+  font-size: 15vw;
   width: 100vw;
   text-align: center;
-  top:-4vh;
+  top:-8vw;
   margin: 0;
 }
 
@@ -70,7 +70,7 @@ h3 {
 }
 .gradebox p {
   font-family: "Google Sans";
-  font-size: 8vh;
+  font-size: 16vw;
   width: 50vw;
   height: 35vw;
   text-align: center;
@@ -91,7 +91,7 @@ h3 {
   text-align: right;
   vertical-align: bottom;
   font-family: "Google Sans";
-  font-size: 3vh;
+  font-size: 6vw;
   transform: translate(-100%,-100%);
   font-weight: 200;
   height: 0;
