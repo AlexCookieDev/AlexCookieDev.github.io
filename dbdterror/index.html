@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Terror</title>
+	</head>
+	<body onclick="resume()">
+		<audio src="1.mp3" id="ter1" loop></audio>
+		<audio src="2.mp3" id="ter2" loop></audio>
+		<audio src="3.mp3" id="ter3" loop></audio>
+		<audio src="4.mp3" id="ter4" loop></audio>
+		<style media="screen">
+			body {background-color: black;}
+			.slidecontainer {
+				width:800px;
+				margin: auto;
+				margin-top: 20%;
+			}
+			.slider {
+			  -webkit-appearance: none;  /* Override default CSS styles */
+			  appearance: none;
+			  width: 100%; /* Full-width */
+			  height: 5px; /* Specified height */
+				background: -moz-linear-gradient(left, #ffffff 0%, #72ff00 7%, #72ff00 27%, #ffc700 28%, #ffc700 50%, #ff7f00 51%, #ff7f00 71%, #ff0000 72%, #ff0000 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left, #ffffff 0%,#72ff00 7%,#72ff00 27%,#ffc700 28%,#ffc700 50%,#ff7f00 51%,#ff7f00 71%,#ff0000 72%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right, #ffffff 0%,#72ff00 7%,#72ff00 27%,#ffc700 28%,#ffc700 50%,#ff7f00 51%,#ff7f00 71%,#ff0000 72%,#ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+			  outline: none; /* Remove outline */
+			  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+				border-radius: 2.5px;
+			}
+			.slider::-webkit-slider-thumb {
+			  -webkit-appearance: none; /* Override default look */
+			  appearance: none;
+			  width: 25px; /* Set a specific slider handle width */
+			  height: 25px; /* Slider handle height */
+			  background-color: white; /* Green background */
+				border-radius: 50%;
+				opacity: 1 !important;
+			  cursor: pointer; /* Cursor on hover */
+			}
+			input[type="range" i] {
+				color: white;
+			}
+		}
+		</style>
+		<div class="slidecontainer">
+	  	<input type="range" min="0" max="280" value="0" class="slider" id="rad" style="width:800px;">
+		</div>
+  </body>
+	<script>
+			(function(){Math.clamp=function(a,b,c){return Math.max(b,Math.min(c,a));}})();
+
+			var r = document.getElementById("rad");
+			var ter1 = document.getElementById("ter1");
+			var ter2 = document.getElementById("ter2");
+			var ter3 = document.getElementById("ter3");
+			var ter4 = document.getElementById("ter4");
+
+			ter1.volume = 0;
+			ter2.volume = 0;
+			ter3.volume = 0;
+			ter4.volume = 0;
+
+			function resume() {
+				ter1.play();
+				ter2.play();
+				ter3.play();
+				ter4.play();
+			};
+
+			r.oninput = function() {
+				var terror = this.value;
+
+				if (0 <= terror && terror < 20) {
+					ter1.volume = terror/20;
+				}else if (20 <= terror && terror < 80) {
+					ter1.volume = 1;
+				}else if (80 < terror && terror < 100) {
+					ter1.volume = (100-terror)/20;
+				}else {ter1.volume = 0;}
+
+				if (60 < terror && terror < 80) {
+					ter2.volume = (terror-60)/20;
+				}else if (80 <= terror && terror < 140) {
+					ter2.volume = 1;
+				}else if (140 <= terror && terror < 160) {
+					ter2.volume = (160-terror)/20;
+				}else {ter2.volume = 0;}
+
+				if (120 < terror && terror < 140) {
+					ter3.volume = (terror-120)/20;
+				}else if (140 <= terror && terror < 200) {
+					ter3.volume = 1;
+				}else if (200 <= terror && terror < 220) {
+					ter3.volume = (220-terror)/20;
+				}else {ter3.volume = 0;}
+
+				if (120 < terror && terror < 140) {
+					ter3.volume = (terror-120)/20;
+				}else if (140 <= terror && terror < 200) {
+					ter3.volume = 1;
+				}else if (200 <= terror && terror < 220) {
+					ter3.volume = (220-terror)/20;
+				}else {ter3.volume = 0;}
+
+				if (180 <= terror && terror < 200) {
+					ter4.volume = (terror-180)/20;
+				}else if (200 <= terror && terror < 290) {
+					ter4.volume = 1;
+				}else {ter4.volume = 0;}
+
+			}
+	</script>
+</html>
