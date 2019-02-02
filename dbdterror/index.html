@@ -5,12 +5,12 @@
 		<title>Terror</title>
 	</head>
 	<body onclick="resume()">
-		<audio src="1.ogg" id="ter1" loop></audio>
-		<audio src="2.ogg" id="ter2" loop></audio>
-		<audio src="3.ogg" id="ter3" loop></audio>
-		<audio src="4.ogg" id="ter4" loop></audio>
+		<audio src="ci1.ogg" id="ter1" loop></audio>
+		<audio src="ci2.ogg" id="ter2" loop></audio>
+		<audio src="ci3.ogg" id="ter3" loop></audio>
+		<audio src="ci4.ogg" id="ter4" loop></audio>
 		<style media="screen">
-			body {background-color: black;}
+			body {background-color: black;margin: 0;}
 			.slidecontainer {
 				width:800px;
 				margin: auto;
@@ -42,11 +42,29 @@
 			input[type="range" i] {
 				color: white;
 			}
+
+			select {
+				width: 20%;
+				height: 40px;
+				border-radius: 20px;
+				padding: 6px 12px;
+				font-family: "Roboto";
+				margin: 40px 40%;
+			}
 		}
 		</style>
 		<div class="slidecontainer">
 	  	<input type="range" min="0" max="280" value="0" class="slider" id="rad" style="width:800px;">
 		</div>
+		<select onchange="change()" id="sel">
+			<option value="ci">Closing In</option>
+			<option value="npth">No Place To Hide</option>
+		  <option value="bt">Blood Trail</option>
+			<option value="ch">Chase #1</option>
+		  <option value="chh">Chase #2</option>
+			<option value="chhh">Chase #3</option>
+			<option value="mm">Michael Myers</option>
+		</select>
   </body>
 	<script>
 			(function(){Math.clamp=function(a,b,c){return Math.max(b,Math.min(c,a));}})();
@@ -56,6 +74,7 @@
 			var ter2 = document.getElementById("ter2");
 			var ter3 = document.getElementById("ter3");
 			var ter4 = document.getElementById("ter4");
+			var sel = document.getElementById("sel");
 
 			ter1.volume = 0;
 			ter2.volume = 0;
@@ -68,6 +87,13 @@
 				ter3.play();
 				ter4.play();
 			};
+
+			function change() {
+				ter1.src = sel.value+"1.ogg";
+				ter2.src = sel.value+"2.ogg";
+				ter3.src = sel.value+"3.ogg";
+				ter4.src = sel.value+"4.ogg";
+			}
 
 			r.oninput = function() {
 				var terror = this.value;
