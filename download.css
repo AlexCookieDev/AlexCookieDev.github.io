@@ -92,7 +92,7 @@ h1
     margin: 0!important;
     margin-right: 18px;
 
-    transition: .2s;
+    transition: opacity .2s;
     vertical-align: middle;
 
     color: #222;
@@ -145,7 +145,7 @@ h2
 
     opacity: 1;
     color: #fff;
-    transition: .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
 h3
@@ -258,7 +258,7 @@ h3
     margin-top: 0;
     margin-bottom: 1vw!important;
 
-    transition: .5s ease-in-out;
+    transition: filter .5s ease-in-out;
 
     opacity: 1;
 }
@@ -271,14 +271,14 @@ h3
 {
     height: 52vh;
 
-    transition: .5s ease-in-out;
+    transition: filter .5s ease-in-out;
 
     filter: brightness(1);
 }
 
 .item:hover h2
 {
-    transition: .5s ease-in-out;
+    transition:  .5s ease-in-out;
     transition-delay: .25s;
 
     opacity: 0;
@@ -305,7 +305,7 @@ h3
     margin-top: 26vh;
     margin-left: 30%;
 
-    transition: .5s ease-in-out;
+    transition: filter .5s ease-in-out;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     filter: brightness(.7);
