@@ -16,28 +16,6 @@ body {
   width: auto;
   position: relative;
 }
-.disabled_panel {
-  display: block;
-  float: left;
-  position: relative;
-  box-sizing: border-box;
-  width: 25%;
-  height: 25vh;
-  background-color: #36393e;
-  border-radius: 8px;
-  border: 4px solid #36393e;
-  overflow: hidden;
-}
-.disabled_panel>img {
-  filter: brightness(0.2) grayscale(100%);
-}
-.contento {
-  display: block;
-  overflow: auto;
-  height: 94vh;
-  width: 100vw;
-  position: fixed;
-}
 .header {
   display: block;
   position:relative;
@@ -48,41 +26,6 @@ body {
   height: 6vh;
   background-color: #2f3136;
   box-sizing: border-box;
-}
-.footer {
-  display: block;
-  position:inherit;
-  bottom: 0px;
-  float: none;
-  width: 100%;
-  height: 10vh;
-}
-.panel {
-  display: block;
-  float: left;
-  position: relative;
-  box-sizing: border-box;
-  width: 25%;
-  height: 25vh;
-  background-color: black;
-  border-radius: 10px;
-  border: 4px solid #36393e ;
-  overflow: hidden;
-}
-.panel_img {
-  position: absolute;
-  width: 125%;
-  opacity: 1;
-  transition: .1s ease-in;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.panel:hover .panel_img {
-  filter:blur(8px);
-}
-.panel:hover h4 {
-  opacity: 1;
 }
 h4 {
   display: block;
@@ -107,42 +50,32 @@ h2 {
   margin: 0;
   text-align: left;
   vertical-align: middle;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   color: #fff;
   font-weight: 300;
-  font-size: 2vh;
+  font-size: 42px ;
   top: 50%;
   left: 1%;
   transform: translate(0, -50%);
 }
-::-webkit-scrollbar {
-    width: 15px;
-    background: #2f3136
+.panel {
+  position: relative;
+  overflow: hidden;
+  width: 20vw;
+  height: 15vw;
+  border: 1vw solid #36393e;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #2f3136;
-    border: 3px solid #2f3136;
-    border-radius: 12px;
+.panel img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 20vw;
 }
-::-webkit-scrollbar-corner {
-  background: #36393e;
-}
-::-webkit-scrollbar-button {
-  display: none;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  width: 9px;
-  background-color: #1e2124;
-  border-radius: 12px;
-  border: 3px solid #2f3136;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  width: 9px;
-  background: #1e2124;
-  border-radius: 12px;
-  border: 3px solid #2f3136;
+.info {
+  width: 100%;
+  height: 4vw;
+  margin-top: 11vw;
+  color: #fff;
+  z-index: -10;
 }

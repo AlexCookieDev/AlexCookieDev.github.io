@@ -92,10 +92,11 @@ h1
     margin: 0!important;
     margin-right: 18px;
 
-    transition: .2s;
+    transition: color .2s;
     vertical-align: middle;
 
     color: #222;
+
 }
 h1:hover
 {
@@ -103,7 +104,7 @@ h1:hover
 }
 .subhead
 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1.5vh;
     font-weight: 400;
 
@@ -113,7 +114,7 @@ h1:hover
     width: 20vw;
     margin: 0!important;
     margin-top: .05vh;
-    padding-top: 1vh;
+    padding-top: 1.2vh;
 
     vertical-align: middle;
 
@@ -153,6 +154,9 @@ h3
     font-size: 3vh;
     font-weight: 400;
 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: .3vh;
+
     position: absolute;
     z-index: 49;
     top: 50vh;
@@ -189,7 +193,7 @@ h3
 }
 .button
 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 2vh;
     font-weight: 400;
 
@@ -239,8 +243,7 @@ h3
     box-sizing: border-box;
     width: 100%;
     padding: 0 2vw;
-
-    animation: load .4s ease-in 1;
+    animation: load 1s ease-in 1;
 }
 
 .item
@@ -263,7 +266,7 @@ h3
 
 .item:hover img
 {
-    height: 70vh;
+    height: 65vh;
 
     transition: .5s ease-in-out;
 
@@ -430,6 +433,10 @@ form p
 @keyframes load
 {
     0%
+    {
+        opacity: 0;
+    }
+    50%
     {
         opacity: 0;
     }
